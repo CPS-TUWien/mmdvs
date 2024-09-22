@@ -1,9 +1,8 @@
 import tensorflow as tf
 from tensorflow.python.keras.models import Model
 from image_normalization import PerImageNormalization
-from wire_neurons import WiredNeurons
 import numpy as np
-
+from ncps.tf.ltc import LTC
 
 def store_weights(model, filename):
     """
@@ -48,7 +47,7 @@ def setup_model(input_dim, output_dim, rnn = None, return_state = False, statefu
     
     td_conv = tf.keras.layers.TimeDistributed(conv_head)(input)
 
-    if isinstance(rnn, WiredNeurons):
+    if isinstance(rnn, LTC):
         y = rnn(td_conv)
     else:
         # Input mapping (this is included in ltcs)
