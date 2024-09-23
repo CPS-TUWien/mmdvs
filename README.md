@@ -13,7 +13,7 @@
     </thead>
     <tbody>
         <tr>
-            <td rowspan=2>60Hz</td>
+            <td rowspan=2>60Hz (with RGB)</td>
             <td colspan=2, align="center">136,484 / 96,161 Frames</td>
         </tr>
         <tr>
@@ -21,7 +21,7 @@
             <td align="center">10.98 GB / 7.462 GB</td>
         </tr>
         <tr>
-            <td rowspan=2>100Hz</td>
+            <td rowspan=2>100Hz (DVS only)</td>
             <td colspan=2, align="center">227,375 / 160,127 Frames</td>
         </tr>
         <tr>
@@ -29,7 +29,7 @@
             <td align="center">4.98 GB / 3.45 GB</td>
         </tr>
         <tr>
-            <td rowspan=2>120Hz</td>
+            <td rowspan=2>120Hz (DVS only)</td>
             <td colspan=2, align="center">272,838 / 192,127 Frames</td>
         </tr>
         <tr>
