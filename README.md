@@ -43,16 +43,16 @@ The sizes in the tables refer to the uncompressed size of the downloadable archi
             <td colspan=2, align="center">227,375 Frames</td>
         </tr>
         <tr>
-            <td align="center">[1.56 GB](https://owncloud.tuwien.ac.at/index.php/s/QWXvZwLiK7Eqom5)</td>
-            <td align="center">[4.98 GB](https://owncloud.tuwien.ac.at/index.php/s/RHWC7e8MXdO1jet)</td>
+            <td align="center"><a href="https://owncloud.tuwien.ac.at/index.php/s/QWXvZwLiK7Eqom5">1.56 GB</a></td>
+            <td align="center"><a href="https://owncloud.tuwien.ac.at/index.php/s/RHWC7e8MXdO1jet">4.98 GB</a></td>
         </tr>
         <tr>
             <td rowspan=2>120Hz (DVS only)</td>
             <td colspan=2, align="center">272,838</td>
         </tr>
         <tr>
-            <td align="center">[1.73 GB](https://owncloud.tuwien.ac.at/index.php/s/VKKqQnRPlNIy2HW)</td>
-            <td align="center">[5.42 GB](https://owncloud.tuwien.ac.at/index.php/s/qHffNsxFWPiFd1G)</td>
+            <td align="center"><a href="https://owncloud.tuwien.ac.at/index.php/s/VKKqQnRPlNIy2HW">1.73 GB</a></td>
+            <td align="center"><a href="https://owncloud.tuwien.ac.at/index.php/s/qHffNsxFWPiFd1G">5.42 GB</a></td>
         </tr>
     </tbody>
 </table>
@@ -88,15 +88,15 @@ a0f4331dbb2a9eaabc2c40514f17d4ea  dvs_only_256p_120hz_noisy.tar.bz2
             <td colspan=2, align="center">160,127 Frames</td>
         </tr>
         <tr>
-            <td align="center">[1.08 GB](https://owncloud.tuwien.ac.at/index.php/s/nKxI4XYEdGJnD2I)</td>
-            <td align="center">[3.45 GB](https://owncloud.tuwien.ac.at/index.php/s/YvQF9DJkqCAL0z5)</td>
+            <td align="center"><a href="https://owncloud.tuwien.ac.at/index.php/s/nKxI4XYEdGJnD2I">1.08 GB</a></td>
+            <td align="center"><a href="https://owncloud.tuwien.ac.at/index.php/s/YvQF9DJkqCAL0z5">3.45 GB</a></td>
         </tr>
         <tr>
             <td rowspan=2>120Hz (DVS only)</td>
             <td colspan=2, align="center">192,127 Frames</td>
         </tr>
         <tr>
-            <td align="center">[1.19 GB](https://owncloud.tuwien.ac.at/index.php/s/R4iq4kYOnowcKBh)</td>
+            <td align="center"><a href="https://owncloud.tuwien.ac.at/index.php/s/R4iq4kYOnowcKBh">1.19 GB</a></td>
             <td align="center">3.75 GB</td>
         </tr>
     </tbody>
