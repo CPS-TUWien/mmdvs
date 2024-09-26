@@ -1,5 +1,9 @@
 # MMDVS-LF
 
+<p align="center">
+    <img src="/images/recording_scheme.png" width="600">
+</p>
+
 Dynamic Vision Sensors (DVS), offer a unique advantage in control applications, due to their high temporal resolution, and asynchronous event-based data.
 Still, their adoption in machine learning algorithms remains limited.
 To address this gap, and promote the development of models that leverage the specific characteristics of DVS data, we introduce the Multi-Modal Dynamic-Vision-Sensor Line Following dataset (MMDVS-LF).
@@ -109,3 +113,21 @@ cc51c86dae91e8aa818ad1f42bf6092b  dvs_only_256p_100hz.tar.bz2
 3bac60150f799a58da2627d54bdeb5e5  dvs_only_256p_120hz.tar.bz2
 01cdc95effbf52b88c4c760a9a52f8d9  dvs_only_512p_100hz.tar.bz2
 ```
+
+## Potential Use Cases of the MMDVS-LF
+<p align="center">
+    <img src="/images/dvs_training_options.png" width="600">
+</p>
+
+## Networks Used for Benchmarking
+- CNN
+- CNN + Simple RNN
+- CNN + MGU
+- CNN + GRU
+- CNN + LSTM
+- CNN + LTC
+
+### Training Setup
+<p align="center">
+    <img src="/images/dvs_networks.png" width="600">
+</p>
