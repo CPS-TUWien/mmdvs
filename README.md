@@ -131,3 +131,16 @@ cc51c86dae91e8aa818ad1f42bf6092b  dvs_only_256p_100hz.tar.bz2
 <p align="center">
     <img src="/images/dvs_networks.png" width="600">
 </p>
+
+## Citation
+```bibtex
+@misc{resch2024mmdvslfmultimodaldynamicvisionsensorline,
+      title={MMDVS-LF: A Multi-Modal Dynamic-Vision-Sensor Line Following Dataset}, 
+      author={Felix Resch and Mónika Farsang and Radu Grosu},
+      year={2024},
+      eprint={2409.18038},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2409.18038}, 
+}
+```
