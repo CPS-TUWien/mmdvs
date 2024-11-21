@@ -1,16 +1,13 @@
 import tensorflow as tf
-from code_cleaned.not_needed.wire_neurons import WiredNeurons
-import code_cleaned.get_model as get_model
-from code_cleaned.not_needed.LRCU import LRCU_Cell
+import get_model
 from MGULayer import MGU
 import ncps
-from ncps.tf.ltc_cell import LTCCell
+from ncps.tf.ltc import LTC
 import argparse
 import numpy as np
 from dataset import LineFollowingDataset
 import os
 import csv
-import matplotlib.pyplot as plt
 
 # Loss function for training
 def mse_loss_fn(y_true, y_pred, steering_weight = 1e4, velocity_weight = 0): 
@@ -89,14 +86,13 @@ parser.add_argument("--stateful", default=False, action="store_true", help="If c
 args = parser.parse_args()
 
 input_dim = (args.height, args.width, args.channels)
-wiring = ncps.wirings.FullyConnected(args.num_neurons, output_dim = args.output)
 
 build_fns = {
-    "ltc": get_model.setup_model(input_dim, args.output, WiredNeurons(LTCCell, wiring, return_sequences=True, return_state=True), return_state=True, stateful=False),
-    "lstm": get_model.setup_model(input_dim, args.output, tf.keras.layers.LSTM(args.num_neurons, implementation=1, return_sequences=True, return_state=True), return_state=True, stateful=False),
-    "gru": get_model.setup_model(input_dim, args.output, tf.keras.layers.GRU(args.num_neurons, return_sequences=True, return_state=True), return_state=True, stateful=False),
-    "simple_rnn": get_model.setup_model(input_dim, args.output, tf.keras.layers.SimpleRNN(args.num_neurons, return_sequences=True, return_state=True), return_state=True, stateful=False),
-    "mgu": get_model.setup_model(input_dim, args.output, tf.keras.layers.RNN(MGU(args.num_neurons), time_major=False, return_sequences=True, return_state=True), return_state=True, stateful=False),
+    "ltc": get_model.setup_model(input_dim, args.output, LTC(ncps.wirings.FullyConnected(args.num_neurons, output_dim = args.output), return_sequences=True), return_state=True, stateful=args.stateful),
+    "lstm": get_model.setup_model(input_dim, args.output, tf.keras.layers.LSTM(args.num_neurons, implementation=1, return_sequences=True, return_state=True), return_state=True, stateful=args.stateful),
+    "gru": get_model.setup_model(input_dim, args.output, tf.keras.layers.GRU(args.num_neurons, return_sequences=True, return_state=True), return_state=True, stateful=args.stateful),
+    "simple_rnn": get_model.setup_model(input_dim, args.output, tf.keras.layers.SimpleRNN(args.num_neurons, return_sequences=True, return_state=True), return_state=True, stateful=args.stateful),
+    "mgu": get_model.setup_model(input_dim, args.output, tf.keras.layers.RNN(MGU(args.num_neurons), time_major=False, return_sequences=True, return_state=True), return_state=True, stateful=args.stateful),
     "conv_fully": get_model.setup_model(input_dim, args.output, None, return_state=True),
 }
 
