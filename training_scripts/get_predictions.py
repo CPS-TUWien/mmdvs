@@ -106,7 +106,7 @@ model.compile(
 )
 
 restore_weights(model, f"./ckpt/{args.weight_filename}.npz")
-data = LineFollowingDataset()
+data = LineFollowingDataset("data")
 
 test_ds = data.load_test_dataset(seq_len=args.seq_len, batch_size=args.batch_size, include_filenames=True)
 
