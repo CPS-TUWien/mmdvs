@@ -88,12 +88,12 @@ args = parser.parse_args()
 input_dim = (args.height, args.width, args.channels)
 
 build_fns = {
-    "ltc": get_model.setup_model(input_dim, args.output, LTC(ncps.wirings.FullyConnected(args.num_neurons, output_dim = args.output), return_sequences=True), return_state=True, stateful=args.stateful),
-    "lstm": get_model.setup_model(input_dim, args.output, tf.keras.layers.LSTM(args.num_neurons, implementation=1, return_sequences=True, return_state=True), return_state=True, stateful=args.stateful),
-    "gru": get_model.setup_model(input_dim, args.output, tf.keras.layers.GRU(args.num_neurons, return_sequences=True, return_state=True), return_state=True, stateful=args.stateful),
-    "simple_rnn": get_model.setup_model(input_dim, args.output, tf.keras.layers.SimpleRNN(args.num_neurons, return_sequences=True, return_state=True), return_state=True, stateful=args.stateful),
-    "mgu": get_model.setup_model(input_dim, args.output, tf.keras.layers.RNN(MGU(args.num_neurons), time_major=False, return_sequences=True, return_state=True), return_state=True, stateful=args.stateful),
-    "conv_fully": get_model.setup_model(input_dim, args.output, None, return_state=True),
+    "ltc": get_model.setup_model(input_dim, args.output, LTC(ncps.wirings.FullyConnected(args.num_neurons, output_dim = args.output), return_sequences=True), stateful=args.stateful),
+    "lstm": get_model.setup_model(input_dim, args.output, tf.keras.layers.LSTM(args.num_neurons, implementation=1, return_sequences=True, return_state=False), stateful=args.stateful),
+    "gru": get_model.setup_model(input_dim, args.output, tf.keras.layers.GRU(args.num_neurons, return_sequences=True, return_state=False), stateful=args.stateful),
+    "simple_rnn": get_model.setup_model(input_dim, args.output, tf.keras.layers.SimpleRNN(args.num_neurons, return_sequences=True, return_state=False), stateful=args.stateful),
+    "mgu": get_model.setup_model(input_dim, args.output, tf.keras.layers.RNN(MGU(args.num_neurons), time_major=False, return_sequences=True, return_state=False), stateful=args.stateful),
+    "conv_fully": get_model.setup_model(input_dim, args.output, None),
 }
 
 model = build_fns[args.model]
