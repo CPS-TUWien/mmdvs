@@ -15,10 +15,10 @@ Dynamic Vision Sensors (DVS) offer a unique advantage in control applications du
 
 ## Citation
 ```bibtex
-@misc{resch2024mmdvslfmultimodaldynamicvisionsensorline,
-      title={MMDVS-LF: A Multi-Modal Dynamic-Vision-Sensor Line Following Dataset}, 
+@misc{resch2025mmdvslfmultimodaldynamicvision,
+      title={MMDVS-LF: Multi-Modal Dynamic Vision Sensor and Eye-Tracking Dataset for Line Following}, 
       author={Felix Resch and Mónika Farsang and Radu Grosu},
-      year={2024},
+      year={2025},
       eprint={2409.18038},
       archivePrefix={arXiv},
       primaryClass={cs.RO},
